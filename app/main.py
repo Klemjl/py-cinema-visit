@@ -9,7 +9,7 @@ def cinema_visit(
     customers: List[Dict[str, str]],
     hall_number: int,
     cleaner: str,
-    movie_name: str,
+    movie: str,
 ) -> None:
     hall = CinemaHall(number=hall_number)
     cleaner_instance = Cleaner(cleaner)
@@ -22,4 +22,4 @@ def cinema_visit(
 
         CinemaBar.sell_product(customer.food, customer)
 
-    hall.movie_session(movie_name, customer_instances, cleaner_instance)
+    hall.movie_session(movie, customer_instances, cleaner_instance)
